@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>Portfolio - Botany Template</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+    <!-- 
+    Botany Template 
+    http://www.templatemo.com/preview/templatemo_391_botany 
+    -->
+
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="../static/css/templatemo_style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML 5 shim for IE backwards compatibility -->
+		<!-- [if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+		</script>
+		<![endif]-->
+	<!--
+	Credits
+	Equal Height Columns http://www.hongkiat.com/blog/css-equal-height/ -->
+</head>
+<body class="templatemo_padaut_bg">
+	<div id="main_container">
+		<div class="container" id="services">
+			<div class="row col-wrap">
+				<div id="left_container" class="col col-md-3 col-sm-12">
+					<div class="templatemo_logo">
+						<a href="#"><img src="../static/images/templatemo_logo.png" alt="Botany Theme"></a>
+					</div>
+					<nav id="main_nav">
+						<ul class="nav">
+							<li class="active"><a href="/index.html">首页</a></li>
+							<li><a href="/datas">数据收集</a></li>
+							<li><a href="/pm_year">全年PM指数分析</a></li>
+							<li><a href="/so_month">每个月api平均值分析</a></li>
+							<li><a href="/zldj_year">全年空气质量等级分析</a></li>
+						</ul>
+					</nav> <!-- nav -->
+
+					<form  action="#" method="get" class="navbar-form" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search" id="keyword" name="keyword">
+						</div>
+						<button type="submit" class="btn btn-primary" name="Search">Go</button>
+					</form>
+					<div>
+						<a href="#"><img src="../static/images/facebook.png" alt="Like us on Facebook"></a>
+						<a href="#"><img src="../static/images/twitter.png" alt="Follow us on Twitter"></a>
+						<a href="#"><img src="../static/images/rss.png" alt="RSS feeds"></a>
+					</div>
+				</div>
+				<div id="right_container" class="col col-md-9 col-sm-12">
+					<div class="row">
+                    	<div class="col col-md-12">
+                    		<h2>数据分析图表</h2>
+                             <h3>优：AQI指数在0-50之间，空气质量优，对健康没有影响；
+良：AQI指数在51-100之间，空气质量良好，但对极少数异常敏感人群健康有较弱影响；
+轻度污染：AQI指数在101-150之间，空气质量轻度污染，敏感人群健康影响较大；
+中度污染：AQI指数在151-200之间，空气质量中度污染，对健康有较大影响；
+重度污染：AQI指数在201-300之间，空气质量重度污染，健康影响更严重；
+严重污染：AQI指数大于300，空气质量严重污染，健康影响极其严重。
+现在，我们来分析每日的空气质量等级以及PM2.5和PM10的情况：
+2020年1月1日：AQI指数为42，空气质量为良。
+2020年1月13日：AQI指数为50，空气质量为良。
+2020年1月26日：AQI指数为26，空气质量为优。
+2020年2月6日：AQI指数为78，空气质量为良。
+2020年4月13日：AQI指数为105，空气质量为轻度污染。
+通过这些数据，我们可以看到空气质量在整个数据周期内波动较大，大部分时间处于优良水平，但也有少数时间段出现了轻度污染。接下来，我们可以对PM2.5和PM10进行进一步分析。
+
+
+
+</h3>
+                    	</div>
+                    </div>
+                    {% for jsfile_name in script_list %}
+                         <script src="{{ host }}/{{ jsfile_name }}.js"></script>
+                   {% endfor %}
+                   {{myechart|safe}}
+				</div>
+			</div>
+			<footer class="row credit">
+				<div class="col col-md-12">
+					<div id="templatemo_footer">
+						Copyright © 2084 <a href="#">Company Name</a>
+
+					</div>
+				</div>
+			</footer>
+		</div>		
+	</div>
+    <!-- templatemo 391 botany -->
+</body>
+</html>
